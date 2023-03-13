@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+	
+     
+</head>
+<body>
+
+
+
+<script>
+     <!-----Filter the students from the class 6th 'A' section from the below array of objects---->
+ let myArr = [
+    {
+     studenName: "jack",
+     studenClass: 6,
+     studenSection: "a"
+    },
+    {
+     studenName: "tom",
+     studenClass: 6,
+     studenSection: "a"
+    },
+    {
+     studenName: "ricky",
+     studenClass: 6,
+     studenSection: "b"
+    },
+	{
+     studenName: "john",
+     studenClass: 6,
+     studenSection: "b"
+    },
+	{
+     studenName: "jerry",
+     studenClass: 6,
+     studenSection: "a"
+    },
+	{
+     studenName: "henry",
+     studenClass: 6,
+     studenSection: "b"
+    },
+	{
+     studenName: "stephen",
+     studenClass: 6,
+     studenSection: "a"
+    }
+];
+   let array = [];
+let sum=myArr.forEach(function(e){
+   if(e.studenSection == "a"){
+    array.push(e.studenName);
+   }
+})
+document.write(JSON.stringify(array),"<br>");
+
+<!----Sort an array of JavaScript objects----->
+
+let library = [ 
+   {
+       title:  'The Road Ahead',
+       author: 'Bill Gates',
+       libraryID: 1254,
+   },
+   {
+       title: 'Walter Isaacson',
+       author: 'Steve Jobs',
+       libraryID: 4264,
+   },
+   {
+       title: 'Mockingjay: The Final Book of The Hunger Games',
+       author: 'Suzanne Collins',
+       libraryID: 3245,
+   },
+   {
+       title: 'Adventures of Tom Sawyer',
+       author: 'Mark Twain',
+       libraryID: 1345,
+   },
+   {
+       title: 'Adventures of Sherlock Holmes',
+       author: 'Sir Arthur Conan Doyle',
+       libraryID: 2245,
+   }
+];
+
+let start=library.sort(function(a,b) {
+let c= a.libraryID-b.libraryID;
+return c;
+});
+
+document.write(JSON.stringify(start),"<br>");
+
+<!-------Write a code to replace the value 6 in the following object with 606----->
+  let obj = {
+           foo: {
+		   a: "hello", 
+		   b: "world" ,
+		   },
+           bar: [
+		   "example",
+		   "mem", 
+		   null, 
+		   { 
+		   xyz: 6 
+		   },88],
+          qux: [4, 8, 12]
+};
+   obj.bar[3].xyz=606;
+ document.write(JSON.stringify(obj));
+</script>
+
+
+
+</body>
+</html>
